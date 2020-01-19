@@ -1,0 +1,110 @@
+/* pages/detail/detail.wxss */
+.contanier{
+  background: #f2f2f2;
+}
+.detail-img{
+  height:350px;
+  position: relative;
+}
+.detail-img .back{
+  width:100%;
+  height:100%;
+  filter: blur(5px);
+  background-position: center;
+  background-size:cover;
+}
+.detail-img .avatar-img{
+  width:210px;
+  height:250px;
+  position: absolute;
+  top: 50%;
+  left:50% ;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+.detail-content {
+  padding: 0 10px;
+}
+.detail-content .top{
+  height:50px;
+  font-weight: bold;
+  font-size:18px;
+}
+.detail-content .rate{
+  color: #c21e39;
+}
+.detail-content .rate .rate-value{
+  padding-left: 10px;
+}
+.publish-info{
+  height:40px;
+  font-size:18px;
+}
+.publish-info .publish{
+  font-weight: bold;
+}
+.book-sign{
+  display: flex;
+  flex-flow: row wrap;
+}
+.book-sign .tag{
+  padding: 4px 12px;
+  border:1px solid #c21e39;
+  color: #c21e39;
+  font-size: 14px;
+  border-radius: 16px;
+  margin:0 20px 12px 0;
+}
+.sumary{
+  font-size:14px;
+  text-indent: 2em;
+}
+.comment{
+  margin: 10px 0;
+}
+.comment-lists {
+  margin: 6px 0;
+}
+.comment-lists .comment-list{
+  padding: 0 12px;
+  margin-bottom: 6px;
+}
+.comment-list .comment-userinfo{
+  height: 40px;
+  border-bottom: 1px solid #c21e29;
+}
+
+.comment-list .comment-userinfo .avatar-url{
+  width: 26px;
+  height: 26px;
+  margin-right: 4px;
+  border-radius: 3px;
+}
+.comment-list .comment-content{
+  padding: 12px 0;
+  font-size: 14px;
+}
+.review-content{
+  width:auto;
+  height: 80px;
+  padding: 10px;
+  margin:6px 0;
+}
+
+
+/* ***通用样式分离出来** */
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title{
+  font-size:18px;
+  font-weight: bold;
+}
+.box-shadows{
+  border: 1px solid #e21c29;
+  border-radius: 3px;
+  box-shadow: 0 0 4px rgba(0,0,0,.2);
+}

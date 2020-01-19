@@ -1,0 +1,44 @@
+/* pages/me/me.wxss */
+.user-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.add-book-btn,
+.contact-btn {
+  width: 100% !important;
+  margin: 10px 0;
+}
+
+.add-book-inputs {
+  display: flex;
+  margin: 20px 0;
+}
+
+.add-book-inputs input {
+  width:62%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.add-book-inputs input:focus-within{
+  border-color: #80bdff;
+  background-color: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+.add-book-inputs button {
+  width:80px;
+  padding: 4px;
+  border-radius: 3px;
+}
+.add-book-inputs button:active{
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}

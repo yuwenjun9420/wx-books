@@ -1,0 +1,59 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+	<view class="detail-img">
+		<view class="back" style="background-image:url({{detailInfo.image}})"></view>
+		<image class="avatar-img" src="{{detailInfo.image}}"></image>
+	</view>
+	<view class="detail-content">
+		<view class="top flex-between">
+			<view class="author">{{detailInfo.author}}</view>
+			<view class="rate">
+				<text class="rate-text">{{detailInfo.rate}}</text>分
+				<text class="rate-vale">{{detailInfo.rate_value}}</text>
+			</view>
+		</view>
+		<view class="publish-info flex-between">
+			<view class="publish">{{detailInfo.publish}}</view>
+			<view class="page-view">访问量({{detailInfo.page_view}})</view>
+		</view>
+		<view class="book-sign">
+			<view class="tag" wx:for="{{detailInfo.tags}}" wx:key="key">{{item.title}}</view>
+		</view>
+		<view class="sumary">
+			{{detailInfo.sumary}}
+		</view>
+		<view class="comment">
+			<view class="title">热门评论</view>
+			<view class="comment-lists">
+				<view class="comment-list box-shadows" wx:for="{{detailInfo.comment}}" wx:key="key">
+					<view class="comment-userinfo flex-between">
+						<view class="name flex-between">
+							<image class="avatar-url" src="{{item.image?item.image:detailInfo.user_info.avatarUrl}}">
+							</image>
+							<text>{{item.auth}}</text>
+						</view>
+						<view class="comment-time">{{item.date}}</view>
+					</view>
+					<view class="comment-content">
+						{{item.content}}
+					</view>
+				</view>
+			</view>
+			<view wx:if="{{userInfo.openid}}">
+				<view class="review">
+					<view class="title">添加评论</view>
+					<textarea class="review-content box-shadows"
+					 bindinput="setComment"
+					 value="{{comments}}"
+					 placeholder="留下您精彩的评论吧"
+					 ></textarea>
+					<button type="primary" bindtap="addComment">提交</button>
+
+				</view>
+			</view>
+			<view wx:else>
+				<button type="primary">登陆</button>
+			</view>
+		</view>
+	</view>
+</view>

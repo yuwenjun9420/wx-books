@@ -1,0 +1,23 @@
+<!--pages/me/me.wxml-->
+<view class="user-container">
+	<view wx:if="{{userInfo.openid}}">
+		<image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+		<view>{{userInfo.nickName}}</view>
+	</view>
+	<view wx:else>
+		<image class="avatar" src="../images/unlogin.jpg"></image>
+		<view>
+			<button size="mini" bindgetuserinfo="onGetUserInfo" open-type="getUserInfo">登陆</button>
+		</view>
+	</view>
+
+	<view wx:if="{{userInfo.openid}}">
+		<view class="add-book-inputs">
+			<input value="{{inputVal}}" bindinput="keyInput" type="text" placeholder="请输入图书的IBSN号" placeholder-style="color:#ccc" /> <button bindtap="inputAddBook" size="mini" type="primary">添加图书</button>
+		</view>
+		<button class="add-book-btn" type="warn" bindtap="scanCode">扫码添加图书</button>
+	</view>
+	<view>
+		<button class="contact-btn" type="warn" open-type="contact">客服</button>
+	</view>
+</view>

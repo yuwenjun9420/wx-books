@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "小程序-图书",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#333",
+    "selectedColor":"#c21e29",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"pages/images/img/home.png",
+        "selectedIconPath":"pages/images/img/homeSelect.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath":"pages/images/img/me.png",
+        "selectedIconPath":"pages/images/img/meSelect.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+	<!-- 轮播图 -->
+	<view class="swiper-container">
+		<swiper indicator-dots="{{indicatorDots}}" 
+		indicator-active-color="{{indicatorActiveColor}}"
+		autoplay="{{autoplay}}" circular="{{circular}}"
+		duration="{{duration}}" interval="{{interval}}">
+			<swiper-item wx:for="{{slider}}" wx:for-index="sliderIndex" wx:key="key">
+				<image wx:for="{{slider[sliderIndex]}}" wx:for-item="cell" wx:for-index="cell-index" wx:key="key" class="slider-img" src="{{cell.image}}"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 图书列表 -->
+	<view class="book-content">
+		<view class="book-lists">
+			<view class="book-list" wx:for="{{bookList}}" wx:key="key">
+				<view class="list-top">
+					<view class="tit">{{item.title}}</view>
+					<view class="rate">{{item.rate_value}}</view>
+				</view>
+				<view class="list-body">
+					<view class="left" data-bid="{{item._id}}" bindtap="jumpToDetail">
+						<image class="avatar-cover" src="{{item.image}}" />
+					</view>
+					<view class="right">
+						<view classs="author">{{item.author}}</view>
+						<view>{{item.publish}}</view>
+						<view class="price">{{item.price}}</view>
+						<view class="consume">浏览量<text>({{item.page_view}})</text></view>
+						<view></view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>
